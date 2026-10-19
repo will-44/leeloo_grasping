@@ -1,0 +1,23 @@
+2026-10-19 07:28:30,858 - graspgenx.dataset.dataset - WARNING - Could not import renderer (pyrender): No module named 'pyrender'. Rendering functions will be unavailable (OK for training).
+/bench/GraspGenX/graspgenx/models/pointnet/pointnet2_utils.py:23: UserWarning: Unable to load pointnet2_ops cpp extension. JIT Compiling.
+  warnings.warn("Unable to load pointnet2_ops cpp extension. JIT Compiling.")
+/bench/GraspGenX/graspgenx/models/pointnet/pointnet2_utils.py:40: UserWarning: Unable to import PointNet++ backbone (pointnet2_ops). PointNet++ models will not be available. Other backbones (e.g. WarpConvNet) are unaffected.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Generator checkpoint : /bench/GraspGenX/ext/graspgenx_checkpoints/release/gen/epoch_736.pth
+Discriminator checkpoint: /bench/GraspGenX/ext/graspgenx_checkpoints/release/dis/epoch_1056.pth
+Generator      : backbone=ptv3vanilla, gripper=sweep_volume_v2, obj_dim=512, embed_dim=512, pointnet_ver=v2
+  DDPM         : train_steps=20, eval_steps=20, beta_schedule=squaredcos_cap_v2, clip_sample=True, compositional=True
+  Grasp        : grasp_repr=r3_so3, kappa(noise_scale)=3.27, pose_repr=mlp
+Discriminator  : backbone=ptv3vanilla, gripper=sweep_volume_v2, obj_dim=512, embed_dim=256, pointnet_ver=v2
+  Grasp        : grasp_repr=r3_so3, kappa(noise_scale)=3.27, pose_repr=mlp
+model load 2.2s
+/bench/GraspGenX/graspgenx/models/generator.py:853: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.sqrt(torch.tensor(var_pos, device=device)),
+/bench/GraspGenX/graspgenx/models/generator.py:865: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.sqrt(torch.tensor(var_rot, device=device)),
+{"points": 2000, "num_grasps": 50, "n": 100, "mean_ms": 759.3235860113055, "p50_ms": 815.296842250973, "p95_ms": 849.1152740083635, "max_ms": 873.0682362802327, "model_only": {"n": 100, "mean_ms": 657.6713002147153, "p50_ms": 728.5625920630991, "p95_ms": 780.6725501315668, "max_ms": 811.7500278167427}, "peak_alloc_MB": 590.37158203125, "peak_reserved_MB": 618.0}
+{"points": 2000, "num_grasps": 100, "n": 100, "mean_ms": 802.1749459812418, "p50_ms": 852.4875848088413, "p95_ms": 898.9558307686821, "max_ms": 909.976118709892, "model_only": {"n": 100, "mean_ms": 698.9702186034992, "p50_ms": 776.734649669379, "p95_ms": 816.9451470253989, "max_ms": 833.9901380240917}, "peak_alloc_MB": 590.4248046875, "peak_reserved_MB": 624.0}
+{"points": 2000, "num_grasps": 200, "n": 100, "mean_ms": 999.9769627302885, "p50_ms": 996.5671633835882, "p95_ms": 1025.9987062308937, "max_ms": 1048.7673380412161, "model_only": {"n": 100, "mean_ms": 895.0362055702135, "p50_ms": 931.6424920689315, "p95_ms": 951.5429891645908, "max_ms": 969.0014338120818}, "peak_alloc_MB": 590.5322265625, "peak_reserved_MB": 624.0}
+{"points": 3500, "num_grasps": 50, "n": 100, "mean_ms": 1000.5626168940216, "p50_ms": 997.614796506241, "p95_ms": 1075.365478452295, "max_ms": 1133.0693974159658, "model_only": {"n": 100, "mean_ms": 665.8953000232577, "p50_ms": 752.9854448512197, "p95_ms": 782.4444915400818, "max_ms": 798.2881027273834}, "peak_alloc_MB": 618.7216796875, "peak_reserved_MB": 672.0}

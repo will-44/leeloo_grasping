@@ -1,0 +1,41 @@
+{
+ "args": {
+  "mode": "sweep",
+  "gripper": "robotiq_2f_85",
+  "iters": 5,
+  "warmup": 2,
+  "points": [
+   3500
+  ],
+  "num_grasps": [
+   100
+  ],
+  "planners": [
+   "diffusion",
+   "graspmoe"
+  ],
+  "planner_num_grasps": 200,
+  "threshold": 0.7,
+  "moe_obb_density": "dense-topandside",
+  "tensorrt": false,
+  "tensorrt_precision": "fp32",
+  "tag": "smoke",
+  "out": "/bench/results"
+ },
+ "torch": "2.12.1a0+git7269437",
+ "host": "localhost.localdomain",
+ "model_load_s": 2.1573772062547505,
+ "results": [
+  {
+   "points": 3500,
+   "num_grasps": 100,
+   "n": 5,
+   "mean_ms": 634.3401873484254,
+   "p50_ms": 634.4107501208782,
+   "p95_ms": 634.977142419666,
+   "max_ms": 635.072996839881,
+   "peak_alloc_MB": 618.7216796875,
+   "peak_reserved_MB": 696.0
+  }
+ ]
+}

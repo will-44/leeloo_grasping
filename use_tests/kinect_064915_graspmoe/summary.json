@@ -1,0 +1,77 @@
+{
+ "capture": "/bench/captures/kinect_20261019_064915",
+ "frame": 0,
+ "planner": "graspmoe",
+ "num_grasps": 200,
+ "threshold": 0.7,
+ "table_inliers_1cm_vox": 22678,
+ "objects": {
+  "canard": {
+   "mask_px": 2068,
+   "obj_points_raw": 1320,
+   "obj_points_used": 1166,
+   "obj_extent_m": [
+    0.096,
+    0.096,
+    0.055
+   ],
+   "grasps_above_thr": 72,
+   "by_branch": {
+    "diff": 51,
+    "obb": 21
+   },
+   "collision_free": 37,
+   "score_max": 0.8428676128387451,
+   "score_median": 0.7518011927604675
+  },
+  "manette": {
+   "mask_px": 4965,
+   "obj_points_raw": 3728,
+   "obj_points_used": 1910,
+   "obj_extent_m": [
+    0.258,
+    0.107,
+    0.063
+   ],
+   "grasps_above_thr": 57,
+   "by_branch": {
+    "diff": 46,
+    "obb": 11
+   },
+   "collision_free": 28,
+   "score_max": 0.8973596692085266,
+   "score_median": 0.7677754163742065
+  },
+  "kirby": {
+   "mask_px": 758,
+   "obj_points_raw": 595,
+   "obj_points_used": 460,
+   "obj_extent_m": [
+    0.089,
+    0.076,
+    0.051
+   ],
+   "grasps_above_thr": 46,
+   "by_branch": {
+    "diff": 44,
+    "obb": 2
+   },
+   "collision_free": 4,
+   "score_max": 0.7187861204147339,
+   "score_median": 0.7132073044776917
+  }
+ },
+ "timings_ms": {
+  "scene_table_ransac": 99.6,
+  "sam2_encoder": 129.2,
+  "sam2_decoder_canard": 19.8,
+  "sam2_decoder_manette": 18.9,
+  "sam2_decoder_kirby": 18.2,
+  "graspgenx_canard": 674.1,
+  "collision_canard": 203.0,
+  "graspgenx_manette": 688.6,
+  "collision_manette": 123.5,
+  "graspgenx_kirby": 2771.9,
+  "collision_kirby": 100.5
+ }
+}
